@@ -1,8 +1,11 @@
 {
   "name": "prettier-plugin-drone-class",
   "version": "0.0.0",
-  "description": "",
+  "description": "Server for CPE clients. Telephone game about describing and building repeatedly.",
+  "author": "BunnyNabbit \"Aon Langton\"",
   "main": "src/index.mjs",
+  "license": "MIT",
+  "repository": "github:BunnyNabbit/prettier-plugin-drone-class",
   "dependencies": {
     "prettier": "^3.5.3",
     "@babel/generator": "^7.25.7",
