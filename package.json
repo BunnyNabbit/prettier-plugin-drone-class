@@ -1,7 +1,7 @@
 {
   "name": "prettier-plugin-drone-class",
   "version": "0.0.0",
-  "description": "Server for CPE clients. Telephone game about describing and building repeatedly.",
+  "description": "prettier plugin to format classes to conform with Drone style.",
   "author": "BunnyNabbit \"Aon Langton\"",
   "main": "src/index.mjs",
   "license": "MIT",
