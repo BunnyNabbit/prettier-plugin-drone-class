@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-drone-class",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "prettier plugin to format classes to conform with Drone style.",
   "author": "BunnyNabbit \"Aon Langton\"",
   "main": "src/index.mjs",
