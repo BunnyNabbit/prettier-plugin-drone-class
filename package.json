@@ -5,6 +5,7 @@
   "author": "BunnyNabbit \"Aon Langton\"",
   "main": "src/index.mjs",
   "license": "MIT",
+  "keywords": ["prettier", "prettier-plugin"],
   "repository": "github:BunnyNabbit/prettier-plugin-drone-class",
   "dependencies": {
     "prettier": "^3.5.3",
