@@ -1,26 +1,15 @@
-import * as prettierPluginBabel from "prettier/plugins/babel"
+// lifted from https://github.com/JoshuaKGoldberg/prettier-plugin-curly/blob/9b717272b115f64e0d2e60a238cc3d85c9bca3cd/src/index.ts#L3-L20
+import * as babel from "prettier/parser-babel"
+import * as typescript from "prettier/parser-typescript"
+import { preprocess } from "./preprocess.mjs"
 
 export const parsers = {
-	"js-parse": {
-		async parse(text) {
-			const ast = await prettierPluginBabel.parsers.babel.parse(text)
-			console.log(ast)
-			return ast
-		},
-		astFormat: "estree",
+	babel: {
+		...(babel.default ?? babel).parsers.babel,
+		preprocess,
 	},
-}
-
-export const languages = [
-	{
-		extensions: [".js", ".mjs", ".cjs", ".ts"],
-		name: "ajva script",
-		parsers: ["js-parse"],
-	},
-]
-
-export const printers = {
-	estree: {
-		async print() {},
+	typescript: {
+		...(typescript.default ?? typescript).parsers.typescript,
+		preprocess,
 	},
 }
