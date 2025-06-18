@@ -1,5 +1,5 @@
 {
-  "name": "prettier-plugin-js-drone",
+  "name": "prettier-plugin-drone-class",
   "version": "0.0.0",
   "description": "",
   "main": "src/index.mjs",
