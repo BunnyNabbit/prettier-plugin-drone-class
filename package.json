@@ -1,11 +1,14 @@
 {
   "name": "prettier-plugin-drone-class",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "prettier plugin to format classes to conform with Drone style.",
   "author": "BunnyNabbit \"Aon Langton\"",
   "main": "src/index.mjs",
   "license": "MIT",
-  "keywords": ["prettier", "prettier-plugin"],
+  "keywords": [
+    "prettier",
+    "prettier-plugin"
+  ],
   "repository": "github:BunnyNabbit/prettier-plugin-drone-class",
   "dependencies": {
     "prettier": "^3.5.3",
