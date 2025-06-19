@@ -1,4 +1,8 @@
 # Drone style class formatter
+
+[![NPM version badge](https://img.shields.io/npm/v/prettier-plugin-drone-class.svg)](http://npmjs.com/package/prettier-plugin-drone-class)
+[![Open GitHub issues badge](https://img.shields.io/github/issues/bunnynabbit/voxel-telephone)](https://github.com/BunnyNabbit/voxel-telephone/issues)
+
 A plugin for prettier to format class methods in a way that conforms to the Drone style.
 ## Example
 Unformatted
