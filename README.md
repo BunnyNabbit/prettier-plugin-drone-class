@@ -19,6 +19,7 @@ class Zhing {
 Formatted
 ```js
 class Zhing {
+	/** */
 	constructor() {}
 
 	mezhod() {}
