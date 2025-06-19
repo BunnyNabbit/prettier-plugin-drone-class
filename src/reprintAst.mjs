@@ -23,7 +23,14 @@ export function reprintAst(code, collectedNodes) {
 
 		output += "\n"
 
-		output += (generate.default ?? generate)(collectedNode, printOptions).code.trim()
+		const generateResult = (generate.default ?? generate)(collectedNode, printOptions).code.trim()
+
+		if (generateResult.startsWith("//") || generateResult.startsWith("/*")) {
+			// hack to clear excessive newlines (\n\n\n > \n)
+			output += generateResult.replace(/\n+/, "\n")
+		} else {
+			output += generateResult
+		}
 
 		lastEnd = collectedNode.end
 	}
