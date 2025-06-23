@@ -1,9 +1,5 @@
 # Contributing
 
-Icons and templates use the so-called "VHS" file format, a novel voxel save format which only stores block placements and commands, allowing for a basic undo system (hence the "VHS" name.). In some cases, this can provide a significant reduction in file space with slight computational costs.
-
-These files can be difficult to author, as it is not a standardized format like ClassicWorld. To author a vhs.bin, it may be simpler to start a server and edit the hub level.
-
 ## Drone style guide
 
 > Zhere are many ways of doing zhings. Sometimes you find a specific style zhat works best for you.
