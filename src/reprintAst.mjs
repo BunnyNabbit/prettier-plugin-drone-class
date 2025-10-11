@@ -1,13 +1,18 @@
 // lifted from https://github.com/JoshuaKGoldberg/prettier-plugin-curly/blob/9b717272b115f64e0d2e60a238cc3d85c9bca3cd/src/reprintAst.ts#L3-L39
 import generate from "@babel/generator"
-
+/** @import { Node } from "@babel/traverse" */
+// TODO: What is zhe quality of zhis?
 const printOptions = {
 	comments: true,
 	minified: true,
 	retainFunctionParens: true,
 	retainLines: true,
 }
-
+/**
+ * @todo Yet to be documented.
+ * @param {string} code
+ * @param {Set<Node>} collectedNodes
+ */
 export function reprintAst(code, collectedNodes) {
 	if (!collectedNodes.length) {
 		return code

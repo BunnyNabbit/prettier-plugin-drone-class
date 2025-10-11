@@ -1,10 +1,14 @@
 // lifted from https://github.com/JoshuaKGoldberg/prettier-plugin-curly/blob/9b717272b115f64e0d2e60a238cc3d85c9bca3cd/src/traverseAndModifyAst.ts#L1-L61
 import traverse from "@babel/traverse"
+/** @import { Node, NodePath } from "@babel/traverse" */
+/** @import { ClassMethod } from "@babel/types" */
 
+/** @param {Node} ast */
 export function traverseAndModifyAst(ast) {
 	const modifiedNodes = new Set()
+	/** @type {Set<Node>} */
 	const seenNodes = new Set()
-
+	/** @param {NodePath<Node>} param0 */
 	function collector({ node }) {
 		if (node.type === "ClassMethod" && nodeNotAlreadySeen(node, seenNodes)) {
 			if (!node.leadingComments || !node.leadingComments.length) {
@@ -13,12 +17,16 @@ export function traverseAndModifyAst(ast) {
 				delete node.leadingComments
 				delete node.trailingComments
 			} else {
+				// @ts-ignore
 				node.ignore = true
 			}
 		}
 	}
 
 	// Insert a CommentBlock node with content "* " before the first method of a class
+	/**@todo Yet to be documented.
+	 * @param {NodePath<ClassMethod>} path
+	 */
 	function addCommentBlockToFirstMethod(path) {
 		const node = path.node
 		if (!node.body || !Array.isArray(node.body)) return
@@ -47,6 +55,10 @@ export function traverseAndModifyAst(ast) {
 	return modifiedNodes
 }
 
+/**@todo Yet to be documented.
+ * @param {Node} node
+ * @param {Set<Node>} seenNodes
+ */
 function nodeNotAlreadySeen(node, seenNodes) {
 	if (seenNodes.has(node)) {
 		return false
